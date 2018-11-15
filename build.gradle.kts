@@ -1,14 +1,18 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
+
 plugins {
     `build-scan`
-    kotlin("jvm") version "1.2.31" 
+    kotlin("jvm") version "1.3.0" 
 }
 
 repositories {
     jcenter() 
 }
 
+
 dependencies {
-    implementation(kotlin("stdlib", "1.2.31")) 
+    implementation(kotlin("stdlib", "1.3.0")) 
     testImplementation("junit:junit:4.12")
 }
 
@@ -19,6 +23,9 @@ buildScan {
     publishAlways() 
 }
 
-compileKotlin {
-    kotlinOptions.freeCompilerArgs += ["-XXLanguage:+InlineClasses"]
+tasks {
+    withType<KotlinCompile> {
+        kotlinOptions.freeCompilerArgs = listOf("-XXLanguage:+InlineClasses")
+        kotlinOptions.jvmTarget = "1.8"
+    }
 }
