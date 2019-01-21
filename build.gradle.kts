@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     `build-scan`
-    kotlin("jvm") version "1.3.0" 
+    kotlin("jvm") version "1.3.11" 
 }
 
 repositories {
@@ -12,7 +12,7 @@ repositories {
 
 
 dependencies {
-    implementation(kotlin("stdlib", "1.3.0")) 
+    implementation(kotlin("stdlib", "1.3.11")) 
     testImplementation("junit:junit:4.12")
 }
 

@@ -1,5 +1,17 @@
 package tktdd
 
+
+sealed class Player{
+    object PlayerOne : Player()
+    object PlayerTwo : Player()
+}
+
+typealias PlayerOne = Player.PlayerOne
+typealias PlayerTwo = Player.PlayerTwo
+
+// Surely not the best choice
+typealias Point = Int
+
 /**
  * The `Language` type defines a programming language with a name and hotness score.
  *
