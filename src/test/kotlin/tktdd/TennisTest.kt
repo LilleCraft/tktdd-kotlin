@@ -22,7 +22,7 @@ class MyTennisTest {
         val advantagePlayer = PlayerOne
         val winner = advantagePlayer
         val nextScore =  scoreWhenAdvantage(advantagePlayer, winner)
-        assertEquals("Advantage Player 1", stringOfScore(nextScore))
+        assertEquals("Game Player 1", stringOfScore(nextScore))
     }
 
     @Test fun givenAdvantageWhenOtherPlayerWins() {
